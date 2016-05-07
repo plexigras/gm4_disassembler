@@ -9,8 +9,10 @@ execute @e[type=ArmorStand,tag=GM4_broken] ~ ~ ~ testfor @e[c=1,r=0,type=ArmorSt
 execute @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1,tag=GM4_broken] ~ ~ ~ summon Item ~ ~1 ~ {Item:{id:"minecraft:redstone",Count:2b},Passengers:[{id:"Item",Item:{id:"minecraft:cobblestone",Count:14}},{id:"Item",Item:{id:"minecraft:tnt",Count:1}},{id:"Item",Item:{id:"minecraft:crafting_table",Count:1,tag:{display:{Lore:["slightly"]}}}}]}
 execute @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1,tag=GM4_broken] ~ ~ ~ kill @e[type=ArmorStand,name=GM4_CustomCrafter,c=1]
 execute @e[name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler"}
-scoreboard players set @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting=0] GM4_crafting 2
-testfor @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1,score_GM4_crafting=1,tag=!GM4_isEmpty]
+scoreboard players set @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=0,score_GM4_crafting=0] GM4_crafting 2
+testfor @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1,score_GM4_crafting_min=1,score_GM4_crafting=1,tag=!GM4_isEmpty]
+COND:blockdata ~-1 ~ ~ {auto:1b}
+I:blockdata ~ ~ ~ {auto:0b}
 execute @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:bow",Damage:0s,Count:1b,Slot:4b}]}
 execute @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:string",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
 execute @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_sword",Damage:0s,Count:1b,Slot:4b}]}

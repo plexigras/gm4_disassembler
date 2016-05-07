@@ -1,0 +1,32 @@
+:mainblock PULSE 17 17 2
+blockdata ~ ~ ~ {auto:0}
+
+//CREATE CRAFTER
+@e[name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Custom Crafter",Items:[{Slot:3b,id:"minecraft:cobblestone",Count:1b,Damage:0s},{Slot:4b,id:"minecraft:tnt",Count:1b,Damage:0s},{Slot:5b,id:"minecraft:cobblestone",Count:1b,Damage:0s},{Slot:6b,id:"minecraft:cobblestone",Count:1b,Damage:0s},{Slot:7b,id:"minecraft:redstone",Count:1b,Damage:0s},{Slot:8b,id:"minecraft:cobblestone",Count:1b,Damage:0s}]}
+CONSTART
+  @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ entitydata @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,r=0] {ArmorItems:[{},{},{},{id:"minecraft:tnt",Count:1b}]}
+  @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ particle lava ~ ~ ~ 0.1 0.1 0.1 5 20 force
+  @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ playsound entity.generic.explode neutral @a[r=5] ~ ~ ~ 1
+  @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[],CustomName:Dissasembler}
+CONEND
+
+//DESTROY CRAFTER
+@e[type=ArmorStand,tag=GM4_broken] ~ ~ ~ testfor @e[c=1,r=0,type=ArmorStand] {ArmorItems:[{},{},{},{id:"minecraft:tnt"}]}
+//@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,tag=GM4_broken] ~ ~ ~ summon Item ~ ~1 ~ {Item:{id:"minecraft:redstone",Count:2b},Passengers:[{id:Item,Item:{id:"minecraft:cobblestone",Count:14}},{id:Item,Item:{id:"minecraft:tnt",Count:1}},{id:Item,Item:{id:crafting_table,Count:1,tag:{display:{Lore:[slightly damaged workbench]}}}}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,tag=GM4_broken] ~ ~ ~ summon Item ~ ~1 ~ {Item:{id:"minecraft:redstone",Count:2b},Passengers:[{id:Item,Item:{id:"minecraft:cobblestone",Count:14}},{id:Item,Item:{id:"minecraft:tnt",Count:1}},{id:Item,Item:{id:crafting_table,Count:1}}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,tag=GM4_broken] ~ ~ ~ kill @e[type=ArmorStand,name=GM4_CustomCrafter,c=1]
+
+//CHECK FOR CRAFTERS WITH ITEMS INSIDE
+@e[name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:Dissasembler}
+@e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting=0] GM4_crafting = 2
+testfor @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1,score_GM4_crafting=1,tag=!GM4_isEmpty]
+
+//RECIPES
+blockdata ~1 ~ ~ {auto:1}
+blockdata ~ ~ ~ {auto:0}
+@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"bow",Damage:0s,Count:1b,Slot:4b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"string",Damage:0s,Count:1b,Slot:0b,},{id:"stick",Damage:0s,Count:1b,Slot:1b,},{id:"string",Damage:0s,Count:1b,Slot:3b,},{id:"stick",Damage:0s,Count:1b,Slot:5b,},{id:"string",Damage:0s,Count:1b,Slot:6b,},{id:"stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"iron_sword",Damage:0s,Count:1b,Slot:4b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"iron_ingot",Damage:0s,Count:1b,Slot:1b,},{id:"iron_ingot",Damage:0s,Count:1b,Slot:4b,},{id:"stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"flint_and_steel",Damage:0s,Count:1b,Slot:4b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"iron_ingot",Damage:0s,Count:1b,Slot:4b,},{id:"flint",Damage:0s,Count:1b,Slot:8b}]}

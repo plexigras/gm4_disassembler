@@ -22,7 +22,8 @@ CONEND
 testfor @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1,score_GM4_crafting=1,tag=!GM4_isEmpty]
 
 //RECIPES
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:bow",Damage:0s,Count:1b,Slot:4b}]}
+CONDITION
+  @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:bow",Damage:0s,Count:1b,Slot:4b}]}
 @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:string",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_sword",Damage:0s,Count:1b,Slot:4b}]}
 @e[type=ArmorStand,name=GM4_CustomCrafter,score_GM4_crafting_min=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}

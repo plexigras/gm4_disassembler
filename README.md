@@ -4,7 +4,9 @@ requires Sparks [Custom Crafter Base Module](https://www.gm4.co/gamemode4/#viewM
 
 Now with more balanced and pseudo random resource return.
 
-Made with Wubbi's [CBP](http://zipkrowd.com/tools.htm#cbp)
+Made with Wubbi's [CBP](http://zipkrowd.com/tools.htm#cbp).
 
 ### One Click Install
-made with Mr. Garretto's [cmdcombiner](http://mrgarretto.com/cmdcombiner) can be found in the main_compressed.txt
+Made with Mr. Garretto's [cmdcombiner](http://mrgarretto.com/cmdcombiner).
+
+The one click import command can be found in the [main_compressed.txt](https://raw.githubusercontent.com/plexigras/gm4_disassembler/master/main_compressed.txt).

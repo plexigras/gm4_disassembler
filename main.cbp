@@ -1,3 +1,4 @@
+// summon ArmorStand ~3 ~-2 ~-1 {CustomName:"DisassemblerCCC",Tags:["CCC"],NoGravity:1}
 :mainblock PULSE 17 16 1
 blockdata ~ ~ ~ {auto:0}
 
@@ -20,98 +21,104 @@ CONEND
 @e[name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler"}
 @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting=0] GM4_crafting = 2
 testfor @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,GM4_crafting=1,tag=!GM4_isEmpty]
+
 CONDITION
   blockdata ~-1 ~ ~ {auto:1b}
 blockdata ~ ~ ~ {auto:0b}
 
-//RECIPES
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:bow",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:string",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+// CHECK DISASSEMBLER
+
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_sword",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:leather_leggings",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:leather",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 2
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_leggings",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 7
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_leggings",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 7
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_leggings",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:8b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:wooden_axe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:planks",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:planks",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:planks",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 7
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_pickaxe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 3
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_axe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:wooden_sword",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:planks",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:planks",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 3
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_sword",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:leather_boots",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:leather",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 2
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_boots",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 4
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_boots",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 4
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_boots",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:8b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:wooden_hoe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:planks",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:planks",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 4
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_axe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 3
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_hoe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:stone_sword",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:leather_helmet",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:leather",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:5b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 2
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_helmet",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:5b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 5
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_helmet",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:5b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 5
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_helmet",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:5b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:wooden_shovel",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:planks",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:stone_shovel",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 5
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_hoe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:fishing_rod",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:stick",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:string",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 2
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_sword",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:leather_chestplate",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:leather",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:7b},{id:"minecraft:leather",Damage:0s,Count:1b,Slot:8b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_chestplate",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:7b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 2
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_chestplate",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:7b},{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 8
+@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_chestplate",Damage:0s,Count:1b,Slot:4b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 8
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_chestplate",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:5b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:6b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:7b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:8b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:wooden_pickaxe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:planks",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:planks",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:planks",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:stone_pickaxe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 8
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_shovel",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 1
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:shears",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:8b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:stone_axe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:stone_hoe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:cobblestone",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 2
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_shovel",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 1
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_pickaxe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 3
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_axe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:3b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 3
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:iron_hoe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 2
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:golden_shovel",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] gold = 1
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:diamond_pickaxe",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:0b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:1b},{id:"minecraft:diamond",Damage:0s,Count:1b,Slot:2b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:stick",Damage:0s,Count:1b,Slot:7b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] dia = 3
 @e[type=ArmorStand,name=GM4_CustomCrafter] ~ ~ ~ testforblock ~ ~ ~ dropper -1 {CustomName:"Disassembler",Items:[{id:"minecraft:flint_and_steel",Damage:0s,Count:1b,Slot:4b}]}
-@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] ~ ~ ~ blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:1b,Slot:4b},{id:"minecraft:flint",Damage:0s,Count:1b,Slot:8b}]}
+@e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1] iron = 1
+
+// GENERATE RANDOM CHANCES
+@e[type=ArmorStand,name=GM4_CustomCrafter] n * 279470273
+@e[type=ArmorStand,name=GM4_CustomCrafter] n % 919393
+@e[type=ArmorStand,name=GM4_CustomCrafter,n<=0] n + 2147483647
+@e[type=ArmorStand,name=GM4_CustomCrafter] count = n
+
+@e[type=ArmorStand,name=GM4_CustomCrafter,iron>0] @e[name=DisassemblerCCC] blockdata ~4 ~3 ~ {auto:1b}
+@e[type=ArmorStand,name=GM4_CustomCrafter,gold>0] @e[name=DisassemblerCCC] blockdata ~6 ~4 ~1 {auto:1b}
+@e[type=ArmorStand,name=GM4_CustomCrafter,dia>0] @e[name=DisassemblerCCC] blockdata ~5 ~4 ~2 {auto:1b}
+
+//wrong item detection @e[type=ArmorStand,name=GM4_CustomCrafter,iron=0,gold=0,dia=0]
+
+blockdata ~ ~ ~ {auto:0b}
+@e[type=ArmorStand,name=GM4_CustomCrafter] count % iron
+@e[type=ArmorStand,name=GM4_CustomCrafter] count + 1
+@e[type=ArmorStand,name=GM4_CustomCrafter] iron = 0
+LOOP 1 8 + 1
+    @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,count=|0|] blockdata ~ ~ ~ {Items:[{id:"minecraft:iron_ingot",Damage:0s,Count:|0|b,Slot:4b}]}
+END
+
+blockdata ~ ~ ~ {auto:0b}
+@e[type=ArmorStand,name=GM4_CustomCrafter] count % gold
+@e[type=ArmorStand,name=GM4_CustomCrafter] count + 9
+@e[type=ArmorStand,name=GM4_CustomCrafter] gold = 0
+LOOP 1 8 + 1
+    @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,count=ADD(|0|;8)] blockdata ~ ~ ~ {Items:[{id:"minecraft:gold_ingot",Damage:0s,Count:|0|b,Slot:4b}]}
+END
+
+blockdata ~ ~ ~ {auto:0b}
+@e[type=ArmorStand,name=GM4_CustomCrafter] count % dia
+@e[type=ArmorStand,name=GM4_CustomCrafter] count + 17
+@e[type=ArmorStand,name=GM4_CustomCrafter] dia = 0
+LOOP 1 8 + 1
+    @e[type=ArmorStand,name=GM4_CustomCrafter,GM4_crafting>=1,count=ADD(|0|;16)] blockdata ~ ~ ~ {Items:[{id:"minecraft:diamond",Damage:0s,Count:|0|b,Slot:4b}]}
+END

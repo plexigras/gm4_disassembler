@@ -10,3 +10,6 @@ Made with Wubbi's [CBP](http://zipkrowd.com/tools.htm#cbp).
 Made with Mr. Garretto's [cmdcombiner](http://mrgarretto.com/cmdcombiner).
 
 The one click import command can be found in the [main_compressed.txt](https://raw.githubusercontent.com/plexigras/gm4_disassembler/master/main_compressed.txt).
+
+### Lossless Version
+The old lossless version can be found in the [lossless branch](https://github.com/plexigras/gm4_disassembler/tree/lossless).
